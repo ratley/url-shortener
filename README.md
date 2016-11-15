@@ -1,5 +1,4 @@
-# Simple URL Shortener
-
+Simple URL shortener
 # Getting Started
 
     $ git clone https://github.com/ratley/url-shortener
