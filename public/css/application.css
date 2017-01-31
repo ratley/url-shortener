@@ -36,7 +36,7 @@ text-align: center;
 
 #cred {
   margin: 1%;
-  font-size: 3em
+  font-size: 1.5em
 }
 #cred a:visited {
   color: salmon
@@ -178,6 +178,9 @@ td {
     }
     #outlink {
         font-size: 4.678em;
+    }
+    #cred {
+      font-size: 3em
     }
     .click_count-align-center {
       display: none
