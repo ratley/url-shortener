@@ -24,44 +24,6 @@
               </div>
             </form>
             <div id="link"></div>
-            <!-- <% if Url.count > 0 %>
-            <table class="table table-hover">
-              <tr>
-                <th>original url</th>
-                <th>shortened url</th>
-                <th class="click_count-align-center">clicks</th>
-                <th id="created_at">created at</th>
-              </tr>
-                <% Url.order(id: :desc).each do |url| %>
-                  <tr>
-                    <div class="urls">
-                      <td> <%= url.long_url %> </td>
-                      <td> <a class="link" id="<%= url.short_url %>" href="/<%=url.short_url%>" target="_blank"> bi-urls.herokuapp.com/<%= url.short_url %></a></td>
-                    </div>
-                    <td short-url="<%= url.short_url %>" class="click_count-align-center"> <%= url.click_count %> </td>
-                    <td class="time"> <%= url.created_at %> </td>
-                  </tr>
-                <% end %>
-            </table>
-            <% else %>
-            <table class="table table-hover">
-              <tbody>
-                <tr id="temprow">
-                  <th>original url</th>
-                  <th>shortened url</th>
-                  <th class="click_count-align-center">clicks</th>
-                  <th id="created_at">created at</th>
-                </tr>
-                <tr style="display: none">
-                  <td></td>
-                  <td><a href=""></a></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-            <% end %> -->
-
             <script>(function(){
               var elements = document.getElementsByClassName('time');
               var d = new Date();
