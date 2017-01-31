@@ -1,7 +1,7 @@
 <tr>
 <div class="urls">
   <td> <%= @url.long_url %> </td>
-  <td> <a class="link" id="<%= @url.short_url %>" href="http://localhost:9393/<%= @url.short_url %>" target="_blank"> localhost:4567/<%= @url.short_url %></a></td>
+  <td> <a class="link" id="<%= @url.short_url %>" href="/<%= @url.short_url %>" target="_blank"> bi-urls.herokuapp.com/<%= @url.short_url %></a></td>
 </div>
 <td short-url="<%= @url.short_url %>" class="click_count-align-center"> <%= @url.click_count %> </td>
 <td class="time"> <%= @url.created_at %> </td>
