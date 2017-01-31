@@ -20,9 +20,6 @@ post '/urls' do
   end
 end
 
-
-# What's the best way to deal with both requests increasing the count?
-# I feel like this isn't it
 get '/:short_url' do
   @url_created =  Url.find_by(short_url: params[:short_url])
   @url_created.click_count += 1

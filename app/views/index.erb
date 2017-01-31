@@ -2,23 +2,25 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>url.s</title>
     </head>
     <body>
-        <div class="container-fluid">
+      <div id="cred">
+        <p>created by <a href="http://inniss.co" target="_blank">bradley inniss</a></p>
+      </div>
           <main class="center">
             <h1>url shortener</h1>
             <p>url to shorten:</p>
             <form id="url" class="form-inline" action="/urls" method="post">
               <div class="row shorten">
-                <input class="col-md-8 input-lg no-radius black-border" id="enabledInput" type="text" name="long_url" placeholder="URL" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Please enter a valid URL">
+                <input class="input-lg no-radius black-border" id="enabledInput" autocomplete="off" type="text" name="long_url" placeholder="URL" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Please enter a valid URL">
                 <input id="timeZone" type="hidden" value="" name="timeZone"/>
                 <script>(function(){
                   var d = new Date();
                   var n = d.getTimezoneOffset();
                   document.getElementById('timeZone').value = "" + n;
                 })();</script>
-                <button class="btn btn-primary col-xs-2 btn-lg no-radius black-bg" type="submit">shorten</button>
+                <button id="shorten-button" class="btn btn-primary btn-lg no-radius black-bg" type="submit">shorten</button>
               </div>
             </form>
             <br><br>
@@ -58,6 +60,5 @@
 
             })();</script>
           </main>
-        </div>
     </body>
 </html>

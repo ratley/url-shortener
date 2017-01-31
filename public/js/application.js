@@ -10,7 +10,7 @@ $(document).ready(function() {
     })
     request.done(function(data) {
       $('input.input-lg').popover('destroy')
-      $('table tr:nth-child(2)').before(data)
+      $('table tr:nth-child(1)').before(data)
       document.getElementById('url').reset()
     })
     request.fail(function(msg) {

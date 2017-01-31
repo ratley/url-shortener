@@ -1,12 +1,35 @@
 body {
-  font-family: Julius Sans One !important;
+  font-family: Roboto !important;
   /*background-image: url('../bg.jpeg');*/
 }
-
+main {
+  max-width: 985px !important;
+}
+#enabledInput {
+float: left;
+width: 70%;
+}
+#enabledInput:focus {
+  outline: none
+}
+#shorten-button {
+  width: 30%
+}
+#cred {
+  margin: 1%
+}
+#cred a:visited {
+  color: salmon
+}
 .center {
   /*width: 100;*/
-  margin-left: 250px;
-  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  padding: 8px;
+}
+.popover-content {
+  font-size: 1.2em
 }
 .no-radius {
   border-radius: 0 !important;
@@ -36,22 +59,43 @@ td {
   text-align: center !important;
   padding-right: 70px !important
 }
-main {
-  max-width: 985px !important;
+@media (max-width: 420px) {
+  #enabledInput, #shorten-button {
+    float: none;
+    width: 96%
+  }
 }
-/*@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
-    .container-fluid {
-      transform:scale(3,3) !important;
-      margin-top: 500px
+    #enabledInput {
+      float: none;
+      width: 98%;
+      height: 150px;
+      font-size: 5.5em;
+      text-align: center;
     }
-    .urls, h2 {
-      display: none;
-    }*/
-    /*body {
-      width: 80% !important
-    }*/
+    #shorten-button {
+      width: 98%;
+      height: 100px;
+      font-size: 2em;
+      border-bottom-left-radius: 10px !important;
+      border-bottom-right-radius: 10px !important
+    }
+    main h1 {
+      font-size: 5.5em;
+      text-align: center
+    }
+    main p {
+      display: none
+    }
+    th {
+      font-size: 1.2em;
+      text-align: center
+    }
+    .table {
+      font-size: 1.6em !important;
+    }
 }
