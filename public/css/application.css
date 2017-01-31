@@ -169,15 +169,15 @@ td {
     #created_at, .time {
       display: none
     }
-    #link{
-      margin-top: 30px;
-    }
     #title {
       font-size: 5em
     }
     #site {
       color: grey;
       font-size: 2em
+    }
+    #outlink {
+        font-size: 4.678em;
     }
     .click_count-align-center {
       display: none
