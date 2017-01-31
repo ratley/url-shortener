@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative '../../config/environment'
+require 'open_uri_redirections'
 
 get '/' do
   erb :index

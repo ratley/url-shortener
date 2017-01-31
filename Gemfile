@@ -9,7 +9,7 @@ gem 'sinatra-contrib'
 gem 'nokogiri'
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
-
+gem 'open_uri_redirections'
 gem 'rake'
 
 gem 'shotgun'

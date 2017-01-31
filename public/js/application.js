@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $('#enabledInput').focus()
-  console.log('why')
   $(document).on('submit', '#url', function(e) {
     e.preventDefault()
     var data = $(this).serialize()
@@ -11,8 +10,10 @@ $(document).ready(function() {
     })
     request.done(function(data) {
       $('input.input-lg').popover('destroy')
-      $('#temprow').show()
-      $('.table > tbody > tr:nth-child(2)').before(data)
+      $('#link').removeClass('fadeInDown')
+      $('#link').addClass('fadeOutDown oldlink')
+      $('#url').after("<div class='animated fadeInDown' id='link'>" + data + "</div>")
+      $('.oldlink').remove()
       document.getElementById('url').reset()
     })
     request.fail(function(msg) {

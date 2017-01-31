@@ -41,6 +41,7 @@ GEM
     multi_json (1.12.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
+    open_uri_redirections (0.2.1)
     pg (0.19.0)
     public_suffix (2.0.5)
     rack (1.6.5)
@@ -94,6 +95,7 @@ DEPENDENCIES
   factory_girl
   faker
   nokogiri
+  open_uri_redirections
   pg
   rack-test
   rake
