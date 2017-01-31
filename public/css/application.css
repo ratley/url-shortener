@@ -5,21 +5,48 @@ body {
 main {
   max-width: 985px !important;
 }
+/*::-webkit-input-placeholder {
+  color: salmon;
+  text-align: center;
+}
+::-moz-placeholder {
+  color: salmon;
+  text-align: center;
+}
+:-ms-input-placeholder {
+  color: salmon;
+  text-align: center;
+}
+:-moz-placeholder {
+  color: salmon;
+  text-align: center;
+}*/
+a {
+  color: salmon !important
+  text-align: center;
+}
 #enabledInput {
 float: left;
 width: 70%;
+text-align: center;
 }
 #enabledInput:focus {
   outline: none
 }
 #shorten-button {
-  width: 30%
+  width: 30%;
+  color: salmon
 }
+
 #cred {
-  margin: 1%
+  margin: 1%;
+  font-size: 1.4em
 }
 #cred a:visited {
   color: salmon
+}
+#temprow {
+  display: none
 }
 .center {
   /*width: 100;*/
@@ -44,8 +71,13 @@ width: 70%;
 .shorten {
   margin-left: 2px !important
 }
+main p {
+  margin-bottom: 0;
+  margin-left:2px
+}
 h1 {
-  margin-left: -3px !important
+  margin-left: -3px !important;
+  text-align: center;
 }
 th {
   font-weight: bolder;
@@ -59,10 +91,48 @@ td {
   text-align: center !important;
   padding-right: 70px !important
 }
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+  border-top: none !important;
+  border-bottom: 1px solid gainsboro
+}
 @media (max-width: 420px) {
   #enabledInput, #shorten-button {
     float: none;
     width: 96%
+  }
+}
+@media (max-width: 705px) {
+  .click_count-align-center {
+    padding-right: 0 !important;
+  }
+  th {
+    text-align: center !important
+  }
+}
+@media (max-width: 560px) {
+  .click_count-align-center {
+    padding-right: 0 !important;
+    display: none;
+  }
+  th {
+    text-align: center !important
+  }
+}
+@media (max-width: 380px) {
+  .click_count-align-center {
+    padding-right: 0 !important;
+    display: none;
+  }
+  #created_at, .time {
+    display: none
+  }
+  th {
+    text-align: center !important
   }
 }
 @media only screen
@@ -72,13 +142,13 @@ td {
   and (orientation: portrait) {
     #enabledInput {
       float: none;
-      width: 98%;
+      width: 99.2%;
       height: 150px;
       font-size: 5.5em;
       text-align: center;
     }
     #shorten-button {
-      width: 98%;
+      width: 99.2%;
       height: 100px;
       font-size: 2em;
       border-bottom-left-radius: 10px !important;

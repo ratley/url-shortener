@@ -99,6 +99,21 @@ namespace :db do
     system("dropdb #{APP_NAME}_development && dropdb #{APP_NAME}_test")
   end
 
+  desc "drop create and migrate"
+  task :reset do
+    puts "Dropping development and test databases..."
+    system("dropdb #{APP_NAME}_development && dropdb #{APP_NAME}_test")
+
+    puts "Creating development and test databases if they don't exist..."
+    system("createdb #{APP_NAME}_development && createdb #{APP_NAME}_test")
+    
+    ActiveRecord::Migrator.migrations_paths << File.dirname(__FILE__) + 'db/migrate'
+    ActiveRecord::Migration.verbose = ENV["VERBOSE"] ? ENV["VERBOSE"] == "true" : true
+    ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, ENV["VERSION"] ? ENV["VERSION"].to_i : nil) do |migration|
+      ENV["SCOPE"].blank? || (ENV["SCOPE"] == migration.scope)
+    end
+  end
+
   desc "Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)."
   task :migrate do
     ActiveRecord::Migrator.migrations_paths << File.dirname(__FILE__) + 'db/migrate'

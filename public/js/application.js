@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('#enabledInput').focus()
+  console.log('why')
   $(document).on('submit', '#url', function(e) {
     e.preventDefault()
     var data = $(this).serialize()
@@ -10,7 +11,8 @@ $(document).ready(function() {
     })
     request.done(function(data) {
       $('input.input-lg').popover('destroy')
-      $('table tr:nth-child(1)').before(data)
+      $('#temprow').show()
+      $('.table > tbody > tr:nth-child(2)').before(data)
       document.getElementById('url').reset()
     })
     request.fail(function(msg) {
