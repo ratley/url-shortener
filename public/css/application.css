@@ -87,7 +87,8 @@ main p {
   margin-left:2px
 }
 #not-so-short {
-  font-size: .5em
+  font-size: .5em;
+  color: grey
 }
 h1 {
   margin-left: -3px !important;
