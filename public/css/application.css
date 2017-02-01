@@ -86,6 +86,9 @@ main p {
   margin-bottom: 0;
   margin-left:2px
 }
+#not-so-short {
+  font-size: .5em
+}
 h1 {
   margin-left: -3px !important;
   text-align: center;
