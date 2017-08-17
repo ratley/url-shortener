@@ -23,7 +23,7 @@ class Url < ActiveRecord::Base
 
   def self.domain_parser
     domain_arr = Array.new
-    domain_site = Nokogiri::HTML(open("http://www.computerhope.com/jargon/num/domains.htm"))
+    domain_site = Nokogiri::HTML(open("https://www.computerhope.com/jargon/num/domains.htm"))
     domain_site.css('td > b').each do |domain|
       domain_arr << domain.text
     end
